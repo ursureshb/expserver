@@ -1,0 +1,25 @@
+{
+  "name": "expserver",
+  "version": "1.0.0",
+  "description": "basic express js server for local development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ursureshb/expserver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ursureshb/expserver/issues"
+  },
+  "homepage": "https://github.com/ursureshb/expserver#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.20.0"
+  }
+}
