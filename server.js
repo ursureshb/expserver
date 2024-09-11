@@ -8,10 +8,13 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-let items = [
-  { id: 1, name: 'Item 1' },
-  { id: 2, name: 'Item 2' }
-];
+let items =   [
+        { id: 1, name: 'Inception', releaseDate: '2010-07-16', rating: 8.8 },
+        { id: 2, name: 'Interstellar', releaseDate: '2014-11-07', rating: 8.6 },
+        { id: 3, name: 'The Dark Knight', releaseDate: '2008-07-18', rating: 9.0 },
+        { id: 4, name: 'The Matrix', releaseDate: '1999-03-31', rating: 8.7 },
+        { id: 5, name: 'Kalki', releaseDate: '2024-06-10', rating: 7.8 }
+     ];
 
 app.get('/api/items', (req, res) => {
   res.json(items);
@@ -29,7 +32,9 @@ app.get('/api/items/:id', (req, res) => {
 app.post('/api/items', (req, res) => {
   const newItem = {
     id: items.length + 1,
-    name: req.body.name
+    name: req.body.name,
+    releaseDate: req.body.releaseDate,
+    rating: req.body.rating
   };
   items.push(newItem);
   res.status(201).json(newItem);
